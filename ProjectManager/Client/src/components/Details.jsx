@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios';
 import { useParams, useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import style from "./style.css"
 import 'bootstrap/dist/css/bootstrap.css';
 
 
