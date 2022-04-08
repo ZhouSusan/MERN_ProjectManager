@@ -23,12 +23,9 @@ export function Login() {
             .then(data => {
                 localStorage.setItem("token", data.token)
                 console.log("Logged In successfully")
-                //history.push("/profile")
             })
             .then(history.push("/"))
             .catch(error => (console.log(error)))
-        // .then(history.push("/profile"))
-        // .then(data => {data.isLoggedIn ? history.push("/profile") : null})
     }
 
     useEffect(() => {
