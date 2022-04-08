@@ -23,7 +23,6 @@ const Main = (props) => {
             })
     }, [])
 
-    //This gets the All projects from DB
     useEffect(() => {
         fetch("http://localhost:8000/api/projects", {
             method: 'GET',
@@ -33,15 +32,11 @@ const Main = (props) => {
         })
             .then(res => res.json())
             .then(data => {
-                //console.log("Response is: ", data)
                 setProjects(data);
             })
     }, [])
 
-    // DELETE
     const deleteProject = (deleteId) => {
-        console.log(deleteId);
-
         if (window.confirm("really?")) {
             fetch("http://localhost:8000/api/projects/" + deleteId, {
                 method: 'DELETE',
@@ -51,8 +46,6 @@ const Main = (props) => {
             })
                 //Todo: push to projectid
                 .then(a => history.push(`/projects`));
-
-
         }
     }
     function calculateProgress() {
@@ -63,10 +56,8 @@ const Main = (props) => {
             }
         }
         let progress = (completedCount / projects.length) * 100
-        console.log(progress)
         return progress;
     }
-    // calculateProgress();
 
     function filterProjects(e) {
         e.preventDefault();
@@ -91,9 +82,6 @@ const Main = (props) => {
         console.log("Temp List", tempList)
         setFilteredProjects(tempList)
     }
-
-
-
 
     return (
         <>
@@ -134,7 +122,6 @@ const Main = (props) => {
                     (filteredProjects.length > 0) ?
                         (filteredProjects.map((project, idx) => {
                             return (
-                                // <div className='projectCard d-flex'  >
                                     <table class='table'>
                                         <tbody>
                                             <tr key={project._id}>
@@ -149,13 +136,9 @@ const Main = (props) => {
                                             </tr>
                                         </tbody>
                                     </table>
-
-
-                                // </div>
                             )
                         })) : (projects.map((project, idx) => {
                             return (
-                                // <div className='projectCard '  >
                                     <table className='table'>
                                         <tbody>
                                             <tr key={project._id}>
@@ -171,7 +154,6 @@ const Main = (props) => {
                                             </tr>
                                         </tbody>
                                     </table>
-                                // </div>
                             )
                         }))
                 }

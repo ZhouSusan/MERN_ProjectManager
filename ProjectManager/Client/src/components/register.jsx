@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import {Link, useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export function Register() {
