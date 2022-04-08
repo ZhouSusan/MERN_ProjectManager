@@ -16,7 +16,6 @@ const ProjectSchema = new mongoose.Schema({
         required:[true,"{PATH} is required"]
     },
     status:{
-        // if ture: it means project is completed
         type:Boolean,
         default:false
     },

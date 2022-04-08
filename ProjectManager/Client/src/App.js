@@ -6,11 +6,11 @@ import {
 } from "react-router-dom";
 import Main from './components/Main';
 import Details from './components/Details';
-import Create from './components/Create';
+import {Create} from './components/Create';
 import Update from './components/Update';
-import { NewTask } from './components/NewTask';
-import { UpdateTask } from './components/UpdateTask';
-import { ViewOneTask } from './components/ViewOneTask';
+import {NewTask} from './components/NewTask';
+import {UpdateTask} from './components/UpdateTask';
+import {ViewOneTask} from './components/ViewOneTask';
 import { Login } from './components/login';
 import { Register } from './components/register';
 
@@ -18,10 +18,13 @@ function App() {
   return (
     <div className="App">
       <Switch>
+        {/* route long to short */}
+        {/* <Routes> */}
+
         <Route exact path="/task/update/:id">
           <UpdateTask />
         </Route>
-
+        
         <Route exact path="/tasks/:projectId">
           <NewTask />
         </Route>
@@ -58,6 +61,7 @@ function App() {
         <Route exact path={"/"}>
           <Redirect to="/projects" />
         </Route>
+        {/* </Routes> */}
       </Switch>
     </div>
   );

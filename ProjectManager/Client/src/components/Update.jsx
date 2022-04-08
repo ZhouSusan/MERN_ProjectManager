@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useHistory, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-
-
 
 const Update = (props) => {
 

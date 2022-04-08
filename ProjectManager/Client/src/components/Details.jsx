@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import { useParams, useHistory } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.css';
+import style from "./style.css"
 
 
 const Detail = (props) => {
@@ -53,21 +54,22 @@ const Detail = (props) => {
             <div className='topbar'>
                 <h1>Task Manager</h1>
                 <div className='topRight'>
-                    <Link className='btn btn-primary' to="/">Home</Link>
+                    <Link className='btn btn-primary' to="/profile">Home</Link>
                     <Link className='btn btn-danger' to="/logOut">Log Out</Link>
                 </div>
             </div>
             <div className="MidControl">
                 <div className='welcome'>
+                    <h2>Welcome, userName or first name</h2>
 
                 </div>
             </div>
 
             <div className='mainDisplay'>
                 <br />
-                <h2>Project Details</h2><br />
+                <h2>View One</h2><br />
                 <div>
-                    <table className='table'>
+                    <table>
                         <tbody>
                             <tr>
                                 <td>Project Name:</td>
@@ -92,7 +94,7 @@ const Detail = (props) => {
                             <tr>
                                 <td>Invite a friend:</td>
                                 <td>
-                                    <input type="text" />    <button className='btn btn-primary'>send</button>
+                                    <input type="text" />    <button>send</button>
                                 </td>
                             </tr>
                             <tr>
@@ -100,6 +102,7 @@ const Detail = (props) => {
                                 {
                                     thisProject.status ? <td>Complete</td> : <td>Ongoing</td>
                                 } 
+                            
                             </tr>
                         </tbody>
                     </table>
@@ -122,11 +125,11 @@ const Detail = (props) => {
 
                 </div>
                 <div className='add-task'>
-                    <Link className='btn btn-success' to={"/tasks/" + thisProject._id}>Add Task</Link>
+                    <Link to={"/tasks/" + thisProject._id}>Add Task</Link>
                 </div>
             </div>
             <div className='edit-delete'>
-                <Link  to={"/projects/" + thisProject._id + "/edit"} className='btn btn-warning'>Edit</Link><button className='btn btn-danger' onClick={handleProjectDelete}>Delete</button>
+                <button className='edit-btn'><Link to={"/projects/" + thisProject._id + "/edit"} className='bLink'>Edit</Link></button><button onClick={handleProjectDelete}>Delete</button>
             </div>
         </>
     )

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
-import style from "./style.css"
 import 'bootstrap/dist/css/bootstrap.css';
 const Main = (props) => {
 
@@ -196,5 +195,6 @@ const Main = (props) => {
         </>
     )
 }
+
 
 export default Main;

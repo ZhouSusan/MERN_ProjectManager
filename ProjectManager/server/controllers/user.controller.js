@@ -49,8 +49,7 @@ module.exports = {
                     }
                     jwt.sign(
                         payload,
-                        // process.env.JWT_SECRET,
-                        "widepeepohappy",
+                        process.env.JWT_SECRET,
                         {expiresIn: 86400},
                         (err,token) => {
                             if(err) {
@@ -72,7 +71,7 @@ module.exports = {
     },
 
     isUserAuth: (req, res) => {
-        return res.json({isLoggedIn : true, username : req.user.username})
+        res.json({isLoggedIn : true, username : req.user.username})
     },
 
     verifyJWT(req, res, next) {
@@ -92,7 +91,7 @@ module.exports = {
                 next();
             })
         } else {
-            return res.json({message: "Incorrect Token Given", isLoggedIn: false});
+            res.json({message: "Incorrect Token Given", isLoggedIn: false});
         }
     }
 }

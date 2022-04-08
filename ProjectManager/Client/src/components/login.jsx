@@ -1,4 +1,4 @@
-import { useHistory ,Link} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export function Login() {
@@ -24,8 +24,8 @@ export function Login() {
                 localStorage.setItem("token", data.token)
                 console.log("Logged In successfully")
             })
-            .then(history.push("/"))
-            .catch(error => (console.log(error)))
+            .then(history.push("/profile"))
+            .catch(error =>(console.log(error)))
     }
 
     useEffect(() => {
@@ -35,35 +35,14 @@ export function Login() {
             }
         })
             .then(res => res.json())
-            .then(data => data.isLoggedIn ? history.push("/") : null)
+            .then(data => data.isLoggedIn ? history.push("/profile") : null)
     }, [])
 
     return (
-        <>
-            <form onSubmit={e => handleLogin(e)}>
-                <table className='table'>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <label>Username: </label>
-                            </td>
-                            <td>
-                                <input required type="text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label>Password: </label>
-                            </td>
-                            <td>
-                                <input required type="password" />
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button type="submit" className='btn btn-primary'>Log In</button>
-            </form>
-            Don't have an account yet? Click <Link to="/register">HERE</Link> to register!
-        </>
+        <form onSubmit={e => handleLogin(e)}>
+            <label>Username: </label><input required type="text" /><br />
+            <label>Password: </label><input required type="password" /><br />
+            <button type="submit">Log In</button>
+        </form>
     )
 }
