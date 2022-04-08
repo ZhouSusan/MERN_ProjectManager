@@ -84,7 +84,7 @@ const Main = (props) => {
     }
 
     return (
-        <>
+        <div>
             <div className='topbar'>
                 <h1>Task Manager</h1>
                 <div className='topRight'>
@@ -127,6 +127,8 @@ const Main = (props) => {
                                             <tr key={project._id}>
                                                 <td>
                                                     <Link to={"/projects/" + project._id} className='bLink'>{project.projectName}</Link>
+                                                    <p>Due Date: {new Date(project.dueDate).toLocaleDateString()}</p>
+                                                    <p>CreatedAt: {new Date(project.createdAt).toLocaleDateString()}</p>
                                                 </td>
                                                 <td>
 
@@ -144,7 +146,8 @@ const Main = (props) => {
                                             <tr key={project._id}>
                                                 <td>
                                                     <Link to={"/projects/" + project._id} className='bLink'>{project.projectName}</Link>
-
+                                                    <p>Due Date: {new Date(project.dueDate).toLocaleDateString()}</p>
+                                                    <p>CreatedAt: {new Date(project.createdAt).toLocaleDateString()}</p>
                                                 </td>
                                                 <td >
                                                     <Link to={"/projects/" + project._id + "/edit"} className='btn btn-warning'>Edit</Link>
@@ -168,13 +171,15 @@ const Main = (props) => {
                                 (<div className='projectCard' key={project._id} >
                                     <h5>
                                         <Link to={"/projects/" + project._id} className='bLink'>{project.projectName}</Link>
+                                        <p>Due Date: {new Date(project.dueDate).toLocaleDateString()}</p>
+                                        <p>CreatedAt: {new Date(project.createdAt).toLocaleDateString()}</p>
                                     </h5>
                                 </div>) : null
                         )
                     })
                 }
             </div>
-        </>
+        </div>
     )
 }
 
