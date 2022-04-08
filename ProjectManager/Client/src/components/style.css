@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px black solid; */
+    margin-bottom: 10px;
+    
+}
+.topRight{
+    display: flex;
+    align-items: center;
+    /* border: 1px black solid; */
+}
+.mid1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.welcome{
+    display: flex;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.progressbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.barimg{
+    width: auto;
+}
+.projectCard{
+    
+    width: 100%;
+    background-color: aqua;
+}
+.proj-list{
+    border: 1px black solid;
+    margin-top: 20px;
+    padding: 10px;
+}
+.App{
+    margin: 20px;
+}
+
+
+/* Project show one */
+.task-control{
+    margin-top: 10px;
+    border: 1px black solid;
+    padding: 10px;
+}
+.add-task{
+    display: flex;
+    justify-content: end;
+}
+.edit-delete{
+    display: flex;
+    justify-content: right;
+    padding:10px
+}
+.controlbtn{
+
+    display: flex;
+    align-items: center;
+}
