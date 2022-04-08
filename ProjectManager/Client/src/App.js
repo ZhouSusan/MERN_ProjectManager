@@ -11,18 +11,13 @@ import Update from './components/Update';
 import { NewTask } from './components/NewTask';
 import { UpdateTask } from './components/UpdateTask';
 import { ViewOneTask } from './components/ViewOneTask';
-import style from "./components/style.css"
 import { Login } from './components/login';
 import { Register } from './components/register';
-import { Profile } from './components/profile';
 
 function App() {
   return (
     <div className="App">
       <Switch>
-        {/* route long to short */}
-        {/* <Routes> */}
-
         <Route exact path="/task/update/:id">
           <UpdateTask />
         </Route>
@@ -63,7 +58,6 @@ function App() {
         <Route exact path={"/"}>
           <Redirect to="/projects" />
         </Route>
-        {/* </Routes> */}
       </Switch>
     </div>
   );
