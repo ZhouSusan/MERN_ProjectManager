@@ -1,0 +1,17 @@
+.topbar{
+  padding:5px;
+  background-color:cadetblue
+}
+.topRight >Link{
+  margin-left: 10px;
+}
+
+.projectCard{
+  padding: 10px;
+  width: 60%;
+  background-color: thistle;
+}
+
+.projectCard >h1, .projectCard >p, .projectCard >div{
+  margin-left: 15px;
+}
