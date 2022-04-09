@@ -42,6 +42,7 @@
 }
 .proj-list{
     border: 1px black solid;
+    background-color: lightskyblue;
     margin-top: 20px;
     padding: 10px;
 }
