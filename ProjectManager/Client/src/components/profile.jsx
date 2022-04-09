@@ -5,8 +5,7 @@ import { useEffect, useState } from 'react';
 export function Profile() {
     const history = useHistory();
     const [projects, setProjects] = useState([]);
-    //const [isLoaded, setIsLoaded] = useState(false);
-    //This verifies that the user is logged
+
     useEffect(() => {
         fetch("/user/isUserAuth", {
             headers: {
@@ -19,7 +18,7 @@ export function Profile() {
                 return data.isLoggedIn ? null : history.push("/")
             })
     }, projects)
-    //This gets the All projects from DB
+
     useEffect(() => {
         fetch("http://localhost:8000/api/projects", {
             method: 'GET',

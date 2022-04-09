@@ -18,8 +18,6 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        {/* route long to short */}
-        {/* <Routes> */}
 
         <Route exact path="/task/update/:id">
           <UpdateTask />
@@ -61,7 +59,7 @@ function App() {
         <Route exact path={"/"}>
           <Redirect to="/projects" />
         </Route>
-        {/* </Routes> */}
+      
       </Switch>
     </div>
   );

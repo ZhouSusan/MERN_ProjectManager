@@ -93,13 +93,6 @@ export function NewTask() {
             <button className='btn btn-primary' type="submit">Create Task</button>
             <Link className='btn btn-danger' to={`/projects/${projectId}`}>Cancel</Link>
         </form>
-        <div>
-            {/* {
-                JSON.stringify(tasks)
-                // isLoaded ? <p>{items.tasks.name}</p> : <p>Loading...</p>
-                
-            } */}
-        </div>
     </div>
 
 

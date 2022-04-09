@@ -5,7 +5,6 @@ export function UpdateTask() {
     const history = useHistory();
     const {id} = useParams();
 
-    //This verifies that the user is logged
     useEffect(() => {
         fetch("/user/isUserAuth", {
             headers: {
@@ -79,13 +78,6 @@ export function UpdateTask() {
             <button className='btn btn-primary' type="submit">Create Task</button>
         <Link className='btn btn-danger' to={`/task/${id}`}>Cancel</Link>
         </form>
-        <div>
-            {/* {
-                // JSON.stringify(tasks)
-                // isLoaded ? <p>{items.tasks.name}</p> : <p>Loading...</p>
-                
-            } */}
-        </div>
     </div>
     )
 }

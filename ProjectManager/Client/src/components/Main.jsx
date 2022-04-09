@@ -86,7 +86,7 @@ const Main = (props) => {
     return (
         <div>
             <div className='topbar'>
-                <h1>Task Manager</h1>
+                <h1>Project Manager</h1>
                 <div className='topRight'>
                     <button className='btn btn-info btn-outline-dark'><Link to="/profile">Home</Link></button>
                     <button className='btn btn-info btn-outline-dark'>

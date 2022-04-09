@@ -52,16 +52,10 @@ const Detail = (props) => {
     return (
         <>
             <div className='topbar'>
-                <h1>Task Manager</h1>
+                <h1>Project Manager</h1>
                 <div className='topRight'>
                     <Link className='btn btn-primary' to="/profile">Home</Link>
                     <Link className='btn btn-danger' to="/logOut">Log Out</Link>
-                </div>
-            </div>
-            <div className="MidControl">
-                <div className='welcome'>
-                    <h2>Welcome, userName or first name</h2>
-
                 </div>
             </div>
 
@@ -85,7 +79,7 @@ const Detail = (props) => {
                             </tr>
                             <tr>
                                 <td>Due Date:</td>
-                                <td>{thisProject.dueDate}</td>
+                                <td>{new Date(thisProject.dueDate).toLocaleDateString()}</td>
                             </tr>
                             <tr>
                                 <td>Team Members:</td>
@@ -109,7 +103,7 @@ const Detail = (props) => {
                 </div>
             </div>
             <div className='task-control'>
-
+                <h3>Tasks for this project:</h3>
                 <div className='task-list'>
                     {
                         tasks.map((task, idx) => {

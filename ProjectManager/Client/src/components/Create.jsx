@@ -50,7 +50,7 @@ export function Create() {
     return(
         <div>
             <div className='topbar'>
-                <h1>Task Manager</h1>
+                <h1>Project Manager</h1>
                 <div className='topRight'>
                     <Link className='btn btn-primary' to="/profile">Home</Link>
                     <Link className='btn btn-danger' to="/logOut">Log Out</Link>
