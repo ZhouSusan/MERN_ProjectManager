@@ -14,7 +14,7 @@
       </ul>
     </td>
     <td style="width:50%">
-        <img src="https://media.giphy.com/media/tyTRV5RL5v48vKYhi6/giphy.gif" alt='Project Manager"/>
+        <img src="https://media.giphy.com/media/tyTRV5RL5v48vKYhi6/giphy.gif" alt="Project Manager"/>
     </td>
   </tr>
 </table>
