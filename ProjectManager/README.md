@@ -1,5 +1,3 @@
-# Project Manager
-
 <h2>
   Project Manager
 </h2>
